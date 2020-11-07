@@ -1,8 +1,11 @@
 var t=0;
-const NUM_LINES=20;
+const NUM_LINES=30;
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
 
 function setup() {
-  createCanvas(800, 800);
+  createCanvas(windowWidth, windowHeight);
   noLoop();
 }
 
@@ -29,7 +32,7 @@ function x2(t) {
 }
 
 function y2(t) {
-  return cos(t/20)*100 + cos(t/12) * 20
+  return cos(t/20)*100 - cos(t/12) * 30 
 }
 
 function mousePressed() {
